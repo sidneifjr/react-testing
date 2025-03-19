@@ -4,6 +4,8 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 
+import vitest from '@vitest/eslint-plugin'
+
 export default tseslint.config(
   { ignores: ['dist'] },
   {
@@ -16,9 +18,12 @@ export default tseslint.config(
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      vitest
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
+      ...vitest.configs.recommended.rules,
+      "vitest/max-nested-describe": ["error", {"max": 3}],
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
