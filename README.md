@@ -1,4 +1,16 @@
-# React + TypeScript + Vite
+# React Testing
+
+## Test Driven Development (TDD)
+
+Test driven development is a software development process where you write tests before writing the software code.
+
+Once the tests have been written, you then write the code to ensure the tests pass.
+
+1) Create tests that verify the functionality of a specific feature;
+2) Write code that runs the tests successfully when re-executed;
+3) Refactor the code for optimization while ensuring the tests continue to pass;
+
+Also known as red-green testing, due to how all tests go from a red-failed state to a green-passed state.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
