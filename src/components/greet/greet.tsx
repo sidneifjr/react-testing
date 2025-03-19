@@ -1,5 +1,11 @@
-export function Greet() {
+type GreetTypes = {
+  name?: string
+}
+
+export function Greet({ name }: GreetTypes) {
   return (
-    <div>Hello</div>
+    <div>
+      <p>Hello {name}</p>
+    </div>    
   )
 }
