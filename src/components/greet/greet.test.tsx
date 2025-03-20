@@ -5,7 +5,7 @@
 import { render, screen } from "@testing-library/react"
 import { Greet } from "./greet"
 
-describe('Greet-related testing', () => {
+describe('Greet', () => {
   test('Greet renders correctly', () => {
     render(<Greet />)
   

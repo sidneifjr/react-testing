@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 
 import App from "../../App"
 
-describe('App-related tests', () => {
+describe('App', () => {
   test('renders page title', () => {
     render(<App />)
 
