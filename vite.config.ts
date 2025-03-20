@@ -14,6 +14,10 @@ export default defineConfig({
     globals: true, // desabilita a necessidade de importar funções do pacote "vitest" em todos os arquivos.
     environment: 'happy-dom',
     setupFiles: ['./src/tests/setup.ts'],
+
+    coverage: {
+      provider: 'v8'
+    }
   },
 
   // Import Alias
