@@ -3,7 +3,7 @@
  * 2) If a name is passed into the component, it should render 'hello', followed by the name;
 */
 import { render, screen } from "@testing-library/react"
-import { Greet } from "./greet"
+import { Greet } from "."
 
 describe('Greet', () => {
   test('Greet renders correctly', () => {
