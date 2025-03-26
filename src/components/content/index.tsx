@@ -11,7 +11,7 @@ export function Content() {
 
   useEffect(() => {
     if(count >= 1) {
-      showBoundary('Apologies, please reload the page')
+      showBoundary('This is a forced error message, triggered for testing purposes only.')
     }
   }, [count, showBoundary])
 
