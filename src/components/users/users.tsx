@@ -5,7 +5,7 @@ export function Users() {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch(import.meta.env.VITE_PUBLIC_USER_API)
       .then((res) => res.json())
       .then((data) => setUsers(data.map((user: {name: string}) => user.name)))
       .catch(() => setError("Error fetching users"))

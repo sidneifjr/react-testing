@@ -1,6 +1,6 @@
 /// <reference types="vitest/config" />
 
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 
 import react from '@vitejs/plugin-react-swc'
 import path from 'path'
@@ -14,6 +14,7 @@ export default defineConfig({
     globals: true, // desabilita a necessidade de importar funções do pacote "vitest" em todos os arquivos.
     environment: 'happy-dom',
     setupFiles: ['./src/tests/setup.ts'],
+    env: loadEnv('', process.cwd(), ''), // https://github.com/vitest-dev/vitest/issues/2117#issuecomment-1890908753
 
     coverage: {
       provider: 'v8'

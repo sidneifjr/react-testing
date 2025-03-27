@@ -19,7 +19,9 @@ describe('Users', () => {
   })
 
   test('renders error', async () => {
-    server.use(http.get('https://jsonplaceholder.typicode.com/users', () => {
+    const url = import.meta.env.VITE_PUBLIC_USER_API
+
+    server.use(http.get(url, () => {
       return HttpResponse.json({ status: 500 })
     }))
 
