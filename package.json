@@ -13,10 +13,12 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.6.1",
     "@testing-library/user-event": "^14.6.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-error-boundary": "^5.0.0",
+    "react-redux": "^9.2.0",
     "react-scan": "^0.3.3"
   },
   "devDependencies": {
