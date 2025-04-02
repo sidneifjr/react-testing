@@ -13,9 +13,9 @@ scan({
 const root = document.getElementById('root')!
 
 createRoot(root).render(
-  <ReduxProvider>
-    <StrictMode>
+  <StrictMode>
+    <ReduxProvider>
       <App />
-    </StrictMode>
-  </ReduxProvider>,
+    </ReduxProvider>,
+  </StrictMode>
 )

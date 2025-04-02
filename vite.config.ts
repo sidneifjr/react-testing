@@ -2,12 +2,23 @@
 
 import { defineConfig, loadEnv } from 'vite'
 
-import react from '@vitejs/plugin-react-swc'
+// import react from '@vitejs/plugin-react-swc' // react-compiler é incompatível com SWC; única opção é Babel, por enquanto.
+import react from '@vitejs/plugin-react'
 import path from 'path'
+
+const ReactCompilerConfig = {}
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      babel: {
+        plugins: [
+          "babel-plugin-react-compiler", ReactCompilerConfig
+        ]
+      }
+    })
+  ],
 
   test: {
     include: ['**/*.test.tsx'],
