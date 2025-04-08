@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 import reactLogo from '../../assets/react.svg'
 import viteLogo from '/vite.svg'
 import { useErrorBoundary } from 'react-error-boundary'
-import { CounterTwo } from '../counter-two'
 
 export function Content() {
   const [count, setCount] = useState<number>(0)
@@ -43,8 +42,6 @@ export function Content() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-
-      <CounterTwo count={0} handleDecrement={() => {}} handleIncrement={() => {}} />
     </>
   )
 }
